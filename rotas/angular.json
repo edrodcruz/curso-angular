@@ -21,20 +21,20 @@
               "src/favicon.ico"
             ],
             "styles": [
+              "node_modules/materialize-css/dist/css/materialize.css",
               "src/styles.css"
             ],
             "scripts": [
-              "../jquery/dist/jquery.js",
-              "../hammerjs/hammer.js",
-              "../materialize-css/dist/js/materialize.js"
-            ]
+              "node_modules/jquery/dist/jquery.js",
+              "node_modules/hammerjs/hammer.js",
+              "node_modules/materialize-css/dist/js/materialize.js"
+    ]
           },
           "configurations": {
             "production": {
               "optimization": true,
               "outputHashing": "all",
               "sourceMap": false,
-              "extractCss": true,
               "namedChunks": false,
               "aot": true,
               "extractLicenses": true,
@@ -52,18 +52,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "rotas:build"
+            "buildTarget": "rotas:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "rotas:build:production"
+              "buildTarget": "rotas:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "rotas:build"
+            "buildTarget": "rotas:build"
           }
         },
         "test": {
@@ -127,14 +127,16 @@
       }
     }
   },
-  "defaultProject": "rotas",
   "schematics": {
     "@schematics/angular:component": {
       "prefix": "app",
-      "styleext": "css"
+      "style": "css"
     },
     "@schematics/angular:directive": {
       "prefix": "app"
     }
+  },
+  "cli": {
+    "analytics": false
   }
 }

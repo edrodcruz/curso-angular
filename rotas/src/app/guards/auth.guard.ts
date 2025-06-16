@@ -1,4 +1,4 @@
-import { Observable } from 'rxjs/Rx';
+import { Observable } from 'rxjs';
 import { Injectable } from '@angular/core';
 import { CanActivate, ActivatedRouteSnapshot, RouterStateSnapshot, Router, CanLoad, Route } from '@angular/router';
 
@@ -25,7 +25,7 @@ export class AuthGuard implements CanActivate, CanLoad {
   private verificarAcesso(){
     if (this.authService.usuarioEstaAutenticado()){
       return true;
-    } 
+    }
 
     this.router.navigate(['/login']);
 

@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-//import { RouterModule } from '@angular/router';
-
+import { FormsModule } from '@angular/forms';
 import { CursosComponent } from './cursos.component';
 import { CursoDetalheComponent } from './curso-detalhe/curso-detalhe.component';
 import { CursoNaoEncontradoComponent } from './curso-nao-encontrado/curso-nao-encontrado.component';
@@ -12,8 +11,8 @@ import { CursoFormComponent } from './curso-form/curso-form.component';
 @NgModule({
     imports: [
         CommonModule,
-        CursosRoutingModule
-        //RouterModule
+        CursosRoutingModule,
+        FormsModule
     ],
     exports: [],
     declarations: [

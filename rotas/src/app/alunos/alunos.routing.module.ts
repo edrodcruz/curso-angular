@@ -8,7 +8,7 @@ import { NgModule } from '@angular/core';
 import { AlunoDetalheResolver } from './guards/aluno-detalhe.resolver';
 
 const alunosRoutes = [
-    {path: '', component: AlunosComponent, 
+    {path: 'alunos', component: AlunosComponent,
      canActivateChild: [AlunosGuard],
      children : [
         {path: 'novo', component: AlunoFormComponent},

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Subscription } from 'rxjs/Rx';
+import { Subscription } from 'rxjs';
 
 import { CursosService } from '../cursos.service';
 
@@ -19,7 +19,7 @@ export class CursoDetalheComponent implements OnInit {
     private route: ActivatedRoute,
     private router: Router,
     private cursosService: CursosService
-  ) { 
+  ) {
     //this.id = this.route.snapshot.params['id'];
     //console.log(this.route);
   }

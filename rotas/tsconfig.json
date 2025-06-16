@@ -18,5 +18,15 @@
     ],
     "module": "es2015",
     "baseUrl": "./"
-  }
+  },
+  "files": [
+    "src/main.ts",
+    "src/polyfills.ts"
+  ],
+  "exclude": [
+    "src/test.ts",
+    "src/**/*.spec.ts"
+  //  "src/app/app.routing.ts",
+   // "src/environments/environment.prod.ts"
+  ]
 }
